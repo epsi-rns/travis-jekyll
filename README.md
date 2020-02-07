@@ -1,4 +1,4 @@
-# Jekyll Bulma MD Test Drive
+# Jekyll Bulma MD Test Drive on Travis
 
 An example of Jekyll site using Bulma Material Design
 for personal learning purpose.
@@ -17,3 +17,5 @@ What do you think ?
 
 [tutorial-jekyll]:      https://gitlab.com/epsi-rns/tutor-jekyll-bulma-md/
 [jekyll-bulma-preview]: https://gitlab.com/epsi-rns/tutor-jekyll-bulma-md/raw/master/jekyll-bulma-md-preview.png
+
+
