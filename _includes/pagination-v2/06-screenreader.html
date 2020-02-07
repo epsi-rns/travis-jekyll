@@ -164,9 +164,10 @@
             {% assign p_link = p_first %}
           {% else %}
             {% assign p_link = site.pagination.permalink
+                             | prepend: paginate_root
                              | relative_url
                              | replace: ':num', page
-                             | prepend: paginate_root %}
+            %}
           {% endif %}
           {% endcapture %}
 
