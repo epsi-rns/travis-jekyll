@@ -39,7 +39,7 @@
       {% assign upper_indicator = total_pages | minus: 1 %}
 
     {% endcapture %}
-{{ p_last }}
+
     <ul class="pagination-list">
 
       <!-- First Page. -->
@@ -165,8 +165,7 @@
             {% assign p_link = site.pagination.permalink
                              | prepend: paginate_root
                              | relative_url
-                             | replace: ':num', page
-            %}
+                             | replace: ':num', page %}
           {% endif %}
           {% endcapture %}
 
