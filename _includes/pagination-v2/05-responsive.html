@@ -17,11 +17,9 @@
       {% assign paginate_root = page.paginate_root %} 
       {% assign p_first = paginate_root | prepend: site.baseurl %}
       {% assign p_last = site.pagination.permalink
+                       | prepend: paginate_root 
                        | relative_url 
                        | replace: ':num', total_pages %}
-      {% assign p_last = p_last 
-                       | prepend: paginate_root 
-                       | prepend: site.baseurl %}
 
       {% assign page_current  = paginator.page %}
 
@@ -157,10 +155,10 @@
             {% assign p_link = p_first %}
           {% else %}
             {% assign p_link = site.pagination.permalink
+                             | prepend: paginate_root
                              | relative_url
                              | replace: ':num', page
-                             | prepend: paginate_root
-                             | prepend: site.baseurl %}
+            %}
           {% endif %}
           {% endcapture %}
 

@@ -55,10 +55,10 @@
     <!-- Last Page. -->
     {% unless paginator.page == total_pages %}
       {% assign p_last = site.pagination.permalink
+                       | prepend: paginate_root
                        | relative_url
                        | replace: ':num', total_pages
-                       | prepend: paginate_root
-                       | prepend: site.baseurl %}
+       %}
       <a class="pagination-next hoverable"
          href="{{ p_last }}"
          rel="last">Last</a>

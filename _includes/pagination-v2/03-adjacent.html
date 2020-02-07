@@ -91,11 +91,9 @@
             {% assign p_link = p_first %}
           {% else %}
             {% assign p_link = site.pagination.permalink
+                             | prepend: paginate_root
                              | relative_url
                              | replace: ':num', page %}
-            {% assign p_link = p_link
-                             | prepend: paginate_root
-                             | prepend: site.baseurl %}
           {% endif %}
           {% endcapture %}
 
