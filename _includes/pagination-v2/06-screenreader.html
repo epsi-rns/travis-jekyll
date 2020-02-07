@@ -19,8 +19,7 @@
       {% assign p_last = site.pagination.permalink
                        | prepend: paginate_root 
                        | relative_url 
-                       | replace: ':num', total_pages
-      %}
+                       | replace: ':num', total_pages %}
 
       {% assign page_current  = paginator.page %}
 
@@ -40,7 +39,7 @@
       {% assign upper_indicator = total_pages | minus: 1 %}
 
     {% endcapture %}
-
+{{ p_last }}
     <ul class="pagination-list">
 
       <!-- First Page. -->
