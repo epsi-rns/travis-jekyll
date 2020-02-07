@@ -2,7 +2,7 @@
   <div class="main_title"> 
     <h1 class="title is-4 blog-post-title"
         itemprop="name headline">
-      <a href="{{ site.url | append:site.baseurl | append:page.url }}">
+      <a href="{{ site.baseurl | append:page.url }}">
         {{ page.title }}</a>
     </h1>
   </div>
@@ -32,7 +32,7 @@
 
     <div class="is-pulled-right p-b-5">
       {% for tag in page.tags %}
-        <a href="{{ site.url | append:site.baseurl }}/pages/tag.html#{{ tag }}">
+        <a href="{{ site.baseurl }}/pages/tag.html#{{ tag }}">
           <span class="tag is-dark is-small teal z-depth-1 hoverable">
             <span class="fa fa-tag"></span>&nbsp;{{ tag }}</span></a>
       {% endfor %}
@@ -41,7 +41,7 @@
 
     <div class="is-pulled-right p-b-5">
       {% for cat in page.categories %}
-        <a href="{{ site.url | append:site.baseurl }}/pages/category.html#{{ cat }}">
+        <a href="{{ site.baseurl }}/pages/category.html#{{ cat }}">
           <span class="tag is-light is-small teal z-depth-1 hoverable">
             <span class="fa fa-folder"></span>&nbsp;{{ cat }}</span></a>
       {% endfor %}
