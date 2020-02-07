@@ -166,8 +166,7 @@
             {% assign p_link = site.pagination.permalink
                              | relative_url
                              | replace: ':num', page
-                             | prepend: paginate_root
-                             | prepend: site.baseurl %}
+                             | prepend: paginate_root %}
           {% endif %}
           {% endcapture %}
 
